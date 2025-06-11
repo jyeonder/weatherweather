@@ -1,319 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #519ce9}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #9ba2b1}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #d65562}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #88b966}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #c58853}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #9ba2b1; min-height: 16.0px}
-    span.s1 {color: #b85dd5}
-    span.s2 {color: #d65562}
-    span.s3 {color: #c58853}
-    span.s4 {color: #88b966}
-    span.s5 {color: #9ba2b1}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Weather</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Jost', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f2f2f2;
+      padding: 40px;
+    }
+    .container {
+      background: #fff;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .section {
+      margin-top: 24px;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE <span class="s1">html</span>&gt;</p>
-<p class="p2">&lt;<span class="s2">html</span> <span class="s3">lang</span>=<span class="s4">"en"</span>&gt;</p>
-<p class="p3"><span class="s5">&lt;</span>head<span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;<span class="s2">meta</span> <span class="s3">charset</span>=<span class="s4">"UTF-8"</span> /&gt;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span><span class="s2">meta</span><span class="s5"> </span><span class="s3">name</span><span class="s5">=</span>"viewport"<span class="s5"> </span><span class="s3">content</span><span class="s5">=</span>"width=device-width, initial-scale=1.0"<span class="s5"> /&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;<span class="s2">title</span>&gt;Minimal Weather&lt;/<span class="s2">title</span>&gt;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span><span class="s2">link</span><span class="s5"> </span><span class="s3">href</span><span class="s5">=</span>"https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&amp;display=swap"<span class="s5"> </span><span class="s3">rel</span><span class="s5">=</span>"stylesheet"<span class="s5">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span>style<span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">box-sizing</span>: border-box;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s2">body</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-family</span>: <span class="s4">'Jost'</span>, sans-serif;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>background<span class="s5">: </span><span class="s3">#f2f2f2</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color</span>: <span class="s3">#222</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">justify-content</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">align-items</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">100vh</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.container<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">background</span>: white;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>border-radius<span class="s5">: </span><span class="s3">24px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">padding</span>: <span class="s3">40px</span> <span class="s3">24px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">box-shadow</span>: <span class="s3">0</span> <span class="s3">10px</span> <span class="s3">20px</span> rgba(<span class="s3">0</span>,<span class="s3">0</span>,<span class="s3">0</span>,<span class="s3">0.05</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">90vw</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">90vh</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">max-width</span>: <span class="s3">540px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">flex-direction</span>: column;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">justify-content</span>: flex-start;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.section-divider<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">1px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>background<span class="s5">: </span><span class="s3">#eee</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">24px</span> <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.location<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">18px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color</span>: <span class="s3">#777</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-bottom<span class="s5">: </span><span class="s3">12px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.weekday<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">22px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>font-weight<span class="s5">: </span><span class="s3">500</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color</span>: <span class="s3">#555</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-bottom<span class="s5">: </span><span class="s3">8px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.temp</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">64px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>font-weight<span class="s5">: </span><span class="s3">300</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.description<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">20px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">8px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">align-items</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">justify-content</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">flex-direction</span>: column;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">gap</span>: <span class="s3">8px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.description<span class="s5"> </span><span class="s2">svg</span><span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">120px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">120px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>stroke-width<span class="s5">: </span><span class="s3">3</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span>#desc-text<span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">8px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.hourly<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">justify-content</span>: space-around;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">gap</span>: <span class="s3">12px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">16px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.hour</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">flex</span>: <span class="s3">0</span> <span class="s3">0</span> auto;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">min-width</span>: <span class="s3">60px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.hour<span class="s5"> </span><span class="s2">p</span>:first-child<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">4px</span> <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">14px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.hour<span class="s5"> </span><span class="s2">p</span>:last-child<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">20px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>font-weight<span class="s5">: </span><span class="s3">500</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.forecast<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: flex;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">justify-content</span>: space-between;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">16px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.day</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">flex</span>: <span class="s3">1</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.day</span> <span class="s2">h4</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">12px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>font-weight<span class="s5">: </span><span class="s3">500</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.day</span> <span class="s2">p</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: <span class="s3">4px</span> <span class="s3">0</span> <span class="s3">0</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">16px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color</span>: <span class="s3">#222</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>font-weight<span class="s5">: </span><span class="s3">400</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.day</span> <span class="s2">svg</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">27px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">27px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">2px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.world-clock<span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">16px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">text-align</span>: center;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.clock-container<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: grid;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">grid-template-columns</span>: repeat(<span class="s3">3</span>, <span class="s3">1</span>fr);</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">gap</span>: <span class="s3">16px</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">8px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.clock</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">60px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">60px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">border</span>: <span class="s3">1px</span> solid <span class="s3">#ccc</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>border-radius<span class="s5">: </span><span class="s3">50%</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">position</span>: relative;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">margin</span>: auto;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>background<span class="s5">: </span><span class="s3">#fff</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.clock.dark<span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>background<span class="s5">: </span><span class="s3">#222</span><span class="s5">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>border-color<span class="s5">: </span><span class="s3">#444</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.clock-label<span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-top<span class="s5">: </span><span class="s3">6px</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">font-size</span>: <span class="s3">12px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color</span>: <span class="s3">#666</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.dark<span class="s5"> </span>.clock-label<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color</span>: <span class="s3">#eee</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.hand</span> {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">position</span>: absolute;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">bottom</span>: <span class="s3">50%</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">left</span>: <span class="s3">50%</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">transform-origin</span>: bottom center;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>background<span class="s5">: </span><span class="s3">#222</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.dark<span class="s5"> </span>.hand<span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>background<span class="s5">: </span><span class="s3">#fff</span><span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.hour-hand<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">3px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">12px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.minute-hand<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">2px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">19px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span>.second-hand<span class="s5"> {</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">width</span>: <span class="s3">1px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">height</span>: <span class="s3">22px</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">background</span>: red;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/<span class="s2">style</span>&gt;</p>
-<p class="p3"><span class="s5">&lt;/</span>head<span class="s5">&gt;</span></p>
-<p class="p3"><span class="s5">&lt;</span>body<span class="s5">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"container"<span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"location"</span>&gt;Seoul, South Korea&lt;/<span class="s2">div</span>&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"weekday"</span> <span class="s3">id</span>=<span class="s4">"weekday"</span>&gt;Monday&lt;/<span class="s2">div</span>&gt;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"temp"<span class="s5"> </span><span class="s3">id</span><span class="s5">=</span>"temperature"<span class="s5">&gt;--°&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"description"<span class="s5">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>&lt;</span><span class="s2">svg</span><span class="s5"> </span><span class="s3">id</span><span class="s5">=</span>"weather-icon"<span class="s5"> </span><span class="s3">viewBox</span><span class="s5">=</span>"0 0 24 24"<span class="s5">&gt;&lt;/</span><span class="s2">svg</span><span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;<span class="s2">span</span> <span class="s3">id</span>=<span class="s4">"desc-text"</span>&gt;Loading...&lt;/<span class="s2">span</span>&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/<span class="s2">div</span>&gt;</p>
-<p class="p6"><br></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"section-divider"<span class="s5">&gt;&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"hourly"<span class="s5"> </span><span class="s3">id</span><span class="s5">=</span>"hourly"<span class="s5">&gt;&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p6"><br></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"section-divider"<span class="s5">&gt;&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"forecast"<span class="s5"> </span><span class="s3">id</span><span class="s5">=</span>"forecast"<span class="s5">&gt;&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p6"><br></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"section-divider"<span class="s5">&gt;&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"world-clock"<span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">      </span>&lt;<span class="s2">h4</span>&gt;World Clocks&lt;/<span class="s2">h4</span>&gt;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>&lt;</span><span class="s2">div</span><span class="s5"> </span><span class="s3">class</span><span class="s5">=</span>"clock-container"<span class="s5"> </span><span class="s3">id</span><span class="s5">=</span>"clocks"<span class="s5">&gt;&lt;/</span><span class="s2">div</span><span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/<span class="s2">div</span>&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>&lt;/<span class="s2">div</span>&gt;</p>
-<p class="p6"><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span>script<span class="s5">&gt;</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">async</span> <span class="s1">function</span> getWeather() {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">try</span> {</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">const</span><span class="s5"> res = </span><span class="s1">await</span><span class="s5"> fetch(</span>"https://api.open-meteo.com/v1/forecast?latitude=37.5665&amp;longitude=126.9780&amp;current_weather=true&amp;hourly=temperature_2m,weathercode&amp;daily=temperature_2m_max,weathercode&amp;timezone=Asia%2FSeoul"<span class="s5">);</span></p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> data = <span class="s1">await</span> res.json();</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> now = <span class="s1">new</span> Date();</p>
-<p class="p2"><span class="Apple-converted-space">        </span>document.getElementById(<span class="s4">"weekday"</span>).textContent = now.toLocaleDateString(<span class="s4">"en-US"</span>, { <span class="s3">weekday</span>: <span class="s4">"long"</span> });</p>
-<p class="p2"><span class="Apple-converted-space">        </span>document.getElementById(<span class="s4">"temperature"</span>).textContent = <span class="s4">`</span><span class="s2">${Math.round(data.current_weather.temperature)}</span><span class="s4">°`</span>;</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> weatherCode = data.current_weather.weathercode;</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> description = weatherCode &lt; <span class="s3">3</span> ? <span class="s4">"Clear"</span> : weatherCode &lt; <span class="s3">45</span> ? <span class="s4">"Cloudy"</span> : <span class="s4">"Rainy"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>document.getElementById(<span class="s4">"desc-text"</span>).textContent = description;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>document.getElementById(<span class="s4">"weather-icon"</span>).innerHTML = weatherCode &lt; <span class="s3">3</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>? </span>'&lt;circle cx="12" cy="12" r="9" fill="none" stroke="#222" stroke-width="3" /&gt;'</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>: </span>'&lt;path d="M5 16h14M7 14a7 7 0 0 1 10 0" fill="none" stroke="#222" stroke-width="3" /&gt;'<span class="s5">;</span></p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> hourlyContainer = document.getElementById(<span class="s4">"hourly"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> nowHour = now.getHours();</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">for</span> (<span class="s1">let</span> i = <span class="s3">0</span>; i &lt; <span class="s3">5</span>; i++) {</p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">const</span> index = data.hourly.time.findIndex(t =&gt; <span class="s1">new</span> Date(t).getHours() === nowHour + i);</p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">if</span> (index !== -<span class="s3">1</span>) {</p>
-<p class="p2"><span class="Apple-converted-space">            </span><span class="s1">const</span> hour = nowHour + i;</p>
-<p class="p2"><span class="Apple-converted-space">            </span><span class="s1">const</span> temp = Math.round(data.hourly.temperature_2m[index]);</p>
-<p class="p2"><span class="Apple-converted-space">            </span><span class="s1">const</span> item = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">            </span>item.className = <span class="s4">"hour"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>item.innerHTML = <span class="s4">`&lt;p&gt;</span><span class="s2">${hour}</span><span class="s4">:00&lt;/p&gt;&lt;p&gt;</span><span class="s2">${temp}</span><span class="s4">°&lt;/p&gt;`</span>;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>hourlyContainer.appendChild(item);</p>
-<p class="p2"><span class="Apple-converted-space">          </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> forecastContainer = document.getElementById(<span class="s4">"forecast"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">        </span>data.daily.time.slice(<span class="s3">0</span>, <span class="s3">6</span>).forEach((dateStr, i) =&gt; {</p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">const</span> date = <span class="s1">new</span> Date(dateStr);</p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">const</span> dayName = date.toLocaleDateString(<span class="s4">"en-US"</span>, { <span class="s3">weekday</span>: <span class="s4">"short"</span> });</p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">const</span> temp = Math.round(data.daily.temperature_2m_max[i]);</p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">const</span> icon = data.daily.weathercode[i] &lt; <span class="s3">3</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>? </span>'&lt;circle cx="9" cy="9" r="7" stroke="#222" stroke-width="2" fill="none" /&gt;'</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>: </span>'&lt;path d="M3 11h12M5 9a6 6 0 0 1 10 0" stroke="#222" stroke-width="2" fill="none" /&gt;'<span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">          </span><span class="s1">const</span> div = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">          </span>div.className = <span class="s4">"day"</span>;</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>div.innerHTML = </span>`&lt;h4&gt;<span class="s2">${dayName}</span>&lt;/h4&gt;&lt;svg viewBox='0 0 18 18'&gt;<span class="s2">${icon}</span>&lt;/svg&gt;&lt;p&gt;<span class="s2">${temp}</span>°&lt;/p&gt;`<span class="s5">;</span></p>
-<p class="p2"><span class="Apple-converted-space">          </span>forecastContainer.appendChild(div);</p>
-<p class="p2"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">      </span>} <span class="s1">catch</span> (err) {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>document.getElementById(<span class="s4">"desc-text"</span>).textContent = <span class="s4">"Failed to load weather."</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">function</span> createClock(city, tz) {</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> container = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> clock = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>clock.className = <span class="s4">"clock"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> label = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>label.className = <span class="s4">"clock-label"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>label.textContent = city;</p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> hourHand = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>hourHand.className = <span class="s4">"hand hour-hand"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> minuteHand = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>minuteHand.className = <span class="s4">"hand minute-hand"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> secondHand = document.createElement(<span class="s4">"div"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>secondHand.className = <span class="s4">"hand second-hand"</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>clock.append(hourHand, minuteHand, secondHand);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>container.append(clock, label);</p>
-<p class="p2"><span class="Apple-converted-space">      </span>document.getElementById(<span class="s4">"clocks"</span>).appendChild(container);</p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">function</span> updateClock() {</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> now = <span class="s1">new</span> Date(<span class="s1">new</span> Date().toLocaleString(<span class="s4">"en-US"</span>, { <span class="s3">timeZone</span>: tz }));</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> h = now.getHours();</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> m = now.getMinutes();</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> s = now.getSeconds();</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> isNight = h &lt; <span class="s3">6</span> || h &gt;= <span class="s3">18</span>;</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">if</span> (isNight) clock.classList.add(<span class="s4">"dark"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">else</span> clock.classList.remove(<span class="s4">"dark"</span>);</p>
-<p class="p2"><span class="Apple-converted-space">        </span>hourHand.style.transform = <span class="s4">`rotate(</span><span class="s2">${(h % </span><span class="s3">12</span><span class="s2">) * </span><span class="s3">30</span><span class="s2"> + m * </span><span class="s3">0.5</span><span class="s2">}</span><span class="s4">deg)`</span>;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>minuteHand.style.transform = <span class="s4">`rotate(</span><span class="s2">${m * </span><span class="s3">6</span><span class="s2">}</span><span class="s4">deg)`</span>;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>secondHand.style.transform = <span class="s4">`rotate(</span><span class="s2">${s * </span><span class="s3">6</span><span class="s2">}</span><span class="s4">deg)`</span>;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">      </span>updateClock();</p>
-<p class="p2"><span class="Apple-converted-space">      </span>setInterval(updateClock, <span class="s3">1000</span>);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p6"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>getWeather();</p>
-<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> cities = [</p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>{ </span><span class="s3">name</span><span class="s5">: </span>"Seoul"<span class="s5">, </span><span class="s3">tz</span><span class="s5">: </span>"Asia/Seoul"<span class="s5"> },</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>{ </span><span class="s3">name</span><span class="s5">: </span>"New York"<span class="s5">, </span><span class="s3">tz</span><span class="s5">: </span>"America/New_York"<span class="s5"> },</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>{ </span><span class="s3">name</span><span class="s5">: </span>"London"<span class="s5">, </span><span class="s3">tz</span><span class="s5">: </span>"Europe/London"<span class="s5"> },</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>{ </span><span class="s3">name</span><span class="s5">: </span>"Paris"<span class="s5">, </span><span class="s3">tz</span><span class="s5">: </span>"Europe/Paris"<span class="s5"> },</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>{ </span><span class="s3">name</span><span class="s5">: </span>"Tokyo"<span class="s5">, </span><span class="s3">tz</span><span class="s5">: </span>"Asia/Tokyo"<span class="s5"> },</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>{ </span><span class="s3">name</span><span class="s5">: </span>"Los Angeles"<span class="s5">, </span><span class="s3">tz</span><span class="s5">: </span>"America/Los_Angeles"<span class="s5"> }</span></p>
-<p class="p2"><span class="Apple-converted-space">    </span>];</p>
-<p class="p2"><span class="Apple-converted-space">    </span>cities.forEach(c =&gt; createClock(c.name, c.tz));</p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span>&lt;/</span>script<span class="s5">&gt;</span></p>
-<p class="p3"><span class="s5">&lt;/</span>body<span class="s5">&gt;</span></p>
-<p class="p3"><span class="s5">&lt;/</span>html<span class="s5">&gt;</span></p>
+  <div class="container">
+    <div class="title">Weather and World Clocks</div>
+    <div class="section">
+      <p>This is where real-time weather info will appear.</p>
+    </div>
+    <div class="section">
+      <p>This is where world clocks will be shown.</p>
+    </div>
+  </div>
 </body>
 </html>
